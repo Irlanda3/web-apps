@@ -2,6 +2,17 @@
 
 <h1>Professors</h1>
 
+<%= form_tag(professors_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Professors" %>
+<%= submit_tag "Search" %>
+<% end %>
+
+<% if @professors.present? %>
+  <%= render @professors %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+
 <table>
   <thead>
     <tr>

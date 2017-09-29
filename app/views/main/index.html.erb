@@ -1,0 +1,10 @@
+<% if @professors %>
+    <% @professors.each do |professor| %>
+        <%= professor.name %><br/>
+    <% end %>
+<% end %>
+
+<%= form_tag "/search/create", method: :get, id: "search-form" do %>
+	<%= text_field_tag :keyword, nil, placeholder: "Que estas buscando" %>
+    <%= submit_tag("Search") %>
+<% end %>

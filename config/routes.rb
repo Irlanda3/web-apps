@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root to:"main#index"
+
+  get 'search/create'
+
   resources :sections
   resources :courses
   resources :professors
