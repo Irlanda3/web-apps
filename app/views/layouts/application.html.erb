@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    
   	<p class="notice"><%= notice %></p>
   	<p class="alert"><%= alert %></p>
   	<% if user_signed_in? %>
@@ -16,6 +17,20 @@
   			<%= link_to "Cerrar sesion", destroy_user_session_path, method: :delete %>
   		</li>
   	<%end%>
+
+    <nav class="be-red white  ">
+      <div class='navbar-inner'>
+        <ul class="no-list row">
+        
+          <h1><li><%= link_to 'Professor', new_professor_path %></li></h1>            
+          
+
+          <h1><li><%= link_to 'Course', courses_path %></li></h1>
+          <h1><li><%= link_to 'Section', sections_path %></li></h1>
+        </ul>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

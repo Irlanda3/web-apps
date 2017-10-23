@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+ <nav class='navbar navbar-default' >
+ 	<div class='collapse navbar-collapse navbar-ex1-collapse' >
+ 		<ul class= 'nav navbar-nav'>
